@@ -19,7 +19,7 @@ export default function CategoriesPage() {
       <div className="text-center mb-8">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">Product Categories</h1>
         <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-          Browse our products by category to find exactly what you're looking for.
+          Browse our products by category to find exactly what you&apos;re looking for.
         </p>
       </div>
 
@@ -40,7 +40,7 @@ export default function CategoriesPage() {
       </div>
 
       <div className="text-center mt-12">
-        <p className="text-gray-600 mb-4">Can't find what you're looking for?</p>
+        <p className="text-gray-600 mb-4">Can&apos;t find what you&apos;re looking for?</p>
         <Link href="/products" passHref>
           <Button variant="outline" className="border-orange-300 text-orange-600 hover:bg-orange-50">
             View All Products
