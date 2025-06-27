@@ -1,36 +1,216 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cloud Flex Product Listing App
 
-## Getting Started
+A modern, responsive product listing interface built with Next.js, React, and Tailwind CSS. This application showcases a clean, user-friendly design with an off-white and orange color scheme.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Core Functionality
+- **Responsive Product Listing**: Grid layout that adapts from 1 column on mobile to 4 columns on desktop
+- **Dynamic Product Details**: Individual product pages with comprehensive information
+- **Modern UI/UX**: Clean design with smooth animations and hover effects
+- **Accessibility**: Focus rings, keyboard navigation, and screen reader support
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Product Display
+- **Product Cards** include:
+  - Product name and image (placeholder)
+  - Current price with original price (if on sale)
+  - Star ratings (1-5 stars)
+  - Product tags as colorful badges
+  - Stock status indicators
+  - "View Details" button for navigation
+  - Sale indicators for discounted items
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Product Details Page
+- **Comprehensive Information**:
+  - High-resolution product images
+  - Brand information
+  - Detailed descriptions
+  - All product tags
+  - Category classification
+  - Customer ratings
+  - Savings percentage calculation
+  - Stock availability status
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Navigation & Pages
+- **Multi-page Navigation**:
+  - Products listing page
+  - Categories overview page
+  - Special deals page
+  - About us page
+  - Contact page with form
+  - Custom 404 error page
 
-## Learn More
+### Design System
+- **Color Scheme**:
+  - Primary: Off-white (\`#f8f8f5\`) background
+  - Secondary: Orange (\`#f97316\`) for accents and CTAs
+  - Hover states: Darker orange (\`#ea580c\`)
+  - Professional typography with Inter font
 
-To learn more about Next.js, take a look at the following resources:
+### Data Structure
+- **Rich Product Data**:
+  - 12 sample products across multiple categories
+  - Product tags for categorization
+  - Brand information
+  - Rating system
+  - Stock management
+  - Sale pricing with original prices
+  - Detailed descriptions
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Technology Stack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript/JavaScript
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui components
+- **Icons**: Lucide React
+- **Image Optimization**: Next.js Image component
+- **Responsive Design**: Mobile-first approach
 
-## Deploy on Vercel
+## 📁 Project Structure
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+\`\`\`
+├── app/
+│   ├── globals.css              # Global styles and Tailwind imports
+│   ├── layout.tsx               # Root layout component
+│   ├── page.tsx                 # Home page (redirects to products)
+│   ├── not-found.tsx            # Custom 404 page
+│   ├── products/
+│   │   ├── page.tsx             # Products listing page
+│   │   └── [id]/
+│   │       └── page.tsx         # Dynamic product detail pages
+│   ├── categories/
+│   │   └── page.tsx             # Categories overview page
+│   ├── deals/
+│   │   └── page.tsx             # Special deals page
+│   ├── about/
+│   │   └── page.tsx             # About us page
+│   └── contact/
+│       └── page.tsx             # Contact page with form
+├── components/
+│   ├── Layout.tsx               # Main layout wrapper
+│   ├── Navbar.tsx               # Navigation component
+│   ├── ProductCard.tsx          # Individual product card
+│   └── ProductGrid.tsx          # Product grid container
+├── data/
+│   └── products.js              # Sample product data
+├── tailwind.config.ts           # Tailwind configuration
+└── README.md                    # Project documentation
+\`\`\`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚦 Getting Started
+
+### Prerequisites
+- Node.js 18+ 
+- npm, yarn, or pnpm
+
+### Installation
+
+1. **Clone the repository**
+   \`\`\`bash
+   git clone <repository-url>
+   cd Cloud Flex-product-listing
+   \`\`\`
+
+2. **Install dependencies**
+   \`\`\`bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   \`\`\`
+
+3. **Run the development server**
+   \`\`\`bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   \`\`\`
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 📱 Pages Overview
+
+### Products Page (\`/products\`)
+- Main product listing with responsive grid
+- All products displayed with key information
+- Hover effects and smooth animations
+
+### Product Detail Page (\`/products/[id]\`)
+- Comprehensive product information
+- Large product images
+- Detailed specifications and descriptions
+- Add to cart and buy now buttons
+
+### Categories Page (\`/categories\`)
+- Overview of all product categories
+- Category icons and product counts
+- Quick navigation to filtered products
+
+### Deals Page (\`/deals\`)
+- Special offers and discounted items
+- Savings calculations and sale indicators
+- Limited-time offer messaging
+
+### About Page (\`/about\`)
+- Company information and mission
+- Key features and benefits
+- Call-to-action for shopping
+
+### Contact Page (\`/contact\`)
+- Contact form with validation
+- Business information and hours
+- Multiple contact methods
+
+## 🔧 Customization
+
+### Adding New Products
+Edit \`data/products.js\` to add new products:
+
+\`\`\`javascript
+{
+  id: "unique-id",
+  name: "Product Name",
+  price: "$XX.XX",
+  originalPrice: "$XX.XX", // Optional for sales
+  image: "/placeholder.svg?height=400&width=400",
+  description: "Product description",
+  tags: ["tag1", "tag2"],
+  category: "Category Name",
+  rating: 4.5,
+  inStock: true,
+  brand: "Brand Name"
+}
+\`\`\`
+
+### Styling Customization
+- Modify \`tailwind.config.ts\` for color scheme changes
+- Update \`app/globals.css\` for global style modifications
+- Component-specific styles in individual component files
+
+## 🚀 Deployment
+
+This project can be deployed on various platforms:
+
+### Vercel (Recommended)
+\`\`\`bash
+npm run build
+vercel --prod
+\`\`\`
+
+### Netlify
+\`\`\`bash
+npm run build
+# Deploy the .next folder
+\`\`\`
+
+### Other Platforms
+Follow Next.js deployment guidelines for your preferred platform.
+
+---
+
+**Made with ❤️ using Next.js and Tailwind CSS**
